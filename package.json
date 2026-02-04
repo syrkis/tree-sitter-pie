@@ -1,0 +1,33 @@
+{
+  "name": "tree-sitter-pie",
+  "version": "1.0.0",
+  "description": "Tree-sitter grammar for the pie language from The Little Typer",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "scripts": {
+    "build": "tree-sitter generate && node-gyp build",
+    "test": "tree-sitter test"
+  },
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "pie",
+    "dependent-types"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tree-sitter-cli": "^0.26.5"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.pie",
+      "file-types": ["pie"],
+      "injection-regex": "^pie$"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syrkis/tree-sitter-pie.git"
+  }
+}
