@@ -6,7 +6,8 @@
   "types": "bindings/node",
   "scripts": {
     "build": "tree-sitter generate && node-gyp build",
-    "test": "tree-sitter test"
+    "test": "tree-sitter test",
+    "install": "node-gyp-build"
   },
   "keywords": [
     "tree-sitter",
@@ -16,8 +17,13 @@
   ],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "nan": "^2.17.0",
+    "node-gyp-build": "^4.6.0"
+  },
   "devDependencies": {
-    "tree-sitter-cli": "^0.26.5"
+    "tree-sitter-cli": "^0.26.5",
+    "node-gyp": "^10.0.1"
   },
   "tree-sitter": [
     {
@@ -29,5 +35,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/syrkis/tree-sitter-pie.git"
-  }
+  },
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/**",
+    "queries/**",
+    "src/**"
+  ]
 }
+
